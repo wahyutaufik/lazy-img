@@ -1,0 +1,29 @@
+{
+  "name": "lazy-img",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lazy-img.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reekoheek/lazy-img.git"
+  },
+  "author": "Ganesha <reekoheek@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reekoheek/lazy-img/issues"
+  },
+  "homepage": "https://github.com/reekoheek/lazy-img#readme",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-3": "^6.16.0",
+    "eslint": "^3.9.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^2.0.1"
+  },
+  "dependencies": {
+    "xin": "xinix-technology/xin#next"
+  }
+}
