@@ -59,7 +59,14 @@ class LazyImg extends xin.Component {
     });
   }
 
+  attached () {
+    super.attached();
+
+    this._srcChanged(this.src);
+  }
+
   async _srcChanged (src) {
+
     if (await LazyImg.fetch(src) === false) {
       src = await LazyImg.fetch(this.fallbackSrc) ? this.fallbackSrc : defaultSrc;
     }
