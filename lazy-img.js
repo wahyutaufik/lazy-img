@@ -11,6 +11,10 @@ class LazyImg extends xin.Component {
   }
 
   static async fetch (src) {
+    if (!src) {
+      return false;
+    }
+
     let href = new URL(src, location.href).href;
 
     if (!loadMap.has(href)) {
