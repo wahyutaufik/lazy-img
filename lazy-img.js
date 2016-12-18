@@ -2,14 +2,14 @@ import xin from 'xin';
 
 import './css/lazy-img.css';
 
-const DEFAULT_SRC = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+let defaultSrc = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 const loadMap = new Map();
 
 class LazyImg extends xin.Component {
   static async setDefault (src) {
     if (await LazyImg.fetch(src)) {
-      DEFAULT_SRC = src;
+      defaultSrc = src;
     }
   }
 
@@ -75,7 +75,7 @@ class LazyImg extends xin.Component {
   async _srcChanged (src) {
 
     if (await LazyImg.fetch(src) === false) {
-      src = await LazyImg.fetch(this.fallbackSrc) ? this.fallbackSrc : DEFAULT_SRC;
+      src = await LazyImg.fetch(this.fallbackSrc) ? this.fallbackSrc : defaultSrc;
     }
 
     if (this.img) {
