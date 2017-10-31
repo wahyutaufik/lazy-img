@@ -14,12 +14,20 @@
   },
   "homepage": "https://github.com/reekoheek/lazy-img#readme",
   "devDependencies": {
-    "eslint": "^3.9.1",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.3.0",
-    "eslint-plugin-standard": "^2.0.1"
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-xinix": "^1.0.4",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^4.2.3",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
   },
   "dependencies": {
-    "xin": "xinix-technology/xin#2.3.1"
+    "@xinix/xin": "^2.4.1"
   }
 }
