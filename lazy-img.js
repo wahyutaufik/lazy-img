@@ -1,4 +1,4 @@
-import xin from 'xin';
+import { Component, define } from '@xinix/xin';
 
 import './css/lazy-img.css';
 
@@ -6,7 +6,7 @@ let defaultSrc = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAA
 
 const loadMap = new Map();
 
-class LazyImg extends xin.Component {
+class LazyImg extends Component {
   static async setDefault (src) {
     if (await LazyImg.fetch(src)) {
       defaultSrc = src;
@@ -89,6 +89,6 @@ class LazyImg extends xin.Component {
   }
 }
 
-xin.define('lazy-img', LazyImg);
+define('lazy-img', LazyImg);
 
 export default LazyImg;
